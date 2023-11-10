@@ -1,0 +1,12 @@
+record_nb;ID;error
+1;110821661;Item itemtype is not mapped : LOVECOLOREDMASTERSPARK
+3;265708354;ID matched multiple lines in provided list
+4;265708354;ID matched multiple lines in provided list
+5;260955175;Multiples biblionumbers provided for this ID
+6;260955198;ID was not found in provided list
+7;285997;ID was not found in provided list
+8;260959975;ID was not found in provided list
+9;890955175;ID was not found in provided list
+10;777955175;ID was not found in provided list
+11;144525;ID was not found in provided list
+12;121915;ID was not found in provided list

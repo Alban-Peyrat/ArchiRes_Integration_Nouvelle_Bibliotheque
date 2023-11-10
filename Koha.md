@@ -27,5 +27,12 @@ Dans l'idéal, créer dans la base de données d'origine des exemples (à défau
 ## Identification des correspondances entre la base d'origine et la Koha ArchiRès
 
 * Si l'on possède la liste des PPNs des documents de la base d'origine, possibilité d'utiliser le script [`PPN_in_Koha`](./scripts/README.md#ppn_in_koha)
-* Selon le volume, la correspondance peut être faite manuellement, mais il faut __absolument veiller à indiquer l'identifiant interne de la bse d'origine dans le fichier et que celui-ci soit facilement identifiable via ordinateur__
+* Selon le volume, la correspondance peut être faite manuellement, mais il faut __absolument veiller à indiquer l'identifiant interne de la base d'origine dans le fichier et que celui-ci soit facilement identifiable via ordinateur__
+  * Ne pas identifier le numéro interne de la base d'origine signifie qu'il faudra réidentifier les documents concernés dans la base d'origine, donc prendre le risque d'une perte du travail effectué (informations qui ont changé, informations qui sont les mêmes entre différents documents, etc.)
 * Sinon, utiliser [FCR (Find and Compare Record)](https://github.com/Alban-Peyrat/Find_and_Compare_Records)
+
+## Transformation des notices pour l'intégration
+
+* Si nécessaire, transformer les notices qui seront intégrées
+  * Bien veiller à supprimer les biblionumbers (001) et numéros d'exemplaires (995$9) pour éviter des imports sur les mauvaises notices et / ou exemplaires
+  * Renseigner les biblionumbers sur les notices qui doivent uniquement importer des exemplaires

@@ -1,0 +1,61 @@
+2023-11-10 16:43:51,315 :: INFO :: Logger initialisé
+2023-11-10 16:43:51,316 :: INFO :: Starting main function...
+2023-11-10 16:43:51,316 :: INFO :: Field created : 801  3$9ThisProject_import$bDBNAME
+2023-11-10 16:43:51,318 :: INFO :: Date : 2023-11-10
+2023-11-10 16:43:51,318 :: INFO :: --- Starting Record 0
+2023-11-10 16:43:51,319 :: DEBUG :: Record is valid
+2023-11-10 16:43:51,319 :: DEBUG :: ID : 266130399
+2023-11-10 16:43:51,322 :: DEBUG :: Biblionumber successfully found : 524582
+2023-11-10 16:43:51,323 :: INFO :: Record fully processed
+2023-11-10 16:43:51,326 :: INFO :: --- Starting Record 1
+2023-11-10 16:43:51,327 :: DEBUG :: Record is valid
+2023-11-10 16:43:51,327 :: DEBUG :: ID : 110821661
+2023-11-10 16:43:51,330 :: DEBUG :: Biblionumber successfully found : 195937
+2023-11-10 16:43:51,331 :: ERROR :: Item itemtype is not mapped : LOVECOLOREDMASTERSPARK
+2023-11-10 16:43:51,332 :: INFO :: Record fully processed
+2023-11-10 16:43:51,334 :: INFO :: --- Starting Record 2
+2023-11-10 16:43:51,335 :: DEBUG :: Record is valid
+2023-11-10 16:43:51,335 :: DEBUG :: ID : 066918855
+2023-11-10 16:43:51,337 :: INFO :: Record fully processed
+2023-11-10 16:43:51,339 :: INFO :: --- Starting Record 3
+2023-11-10 16:43:51,340 :: DEBUG :: Record is valid
+2023-11-10 16:43:51,341 :: DEBUG :: ID : 265708354
+2023-11-10 16:43:51,342 :: ERROR :: ID matched multiple lines in provided list
+2023-11-10 16:43:51,344 :: INFO :: --- Starting Record 4
+2023-11-10 16:43:51,345 :: DEBUG :: Record is valid
+2023-11-10 16:43:51,345 :: DEBUG :: ID : 265708354
+2023-11-10 16:43:51,347 :: ERROR :: ID matched multiple lines in provided list
+2023-11-10 16:43:51,348 :: INFO :: --- Starting Record 5
+2023-11-10 16:43:51,348 :: DEBUG :: Record is valid
+2023-11-10 16:43:51,349 :: DEBUG :: ID : 260955175
+2023-11-10 16:43:51,350 :: ERROR :: Multiples biblionumbers provided for this ID
+2023-11-10 16:43:51,352 :: INFO :: --- Starting Record 6
+2023-11-10 16:43:51,353 :: DEBUG :: Record is valid
+2023-11-10 16:43:51,354 :: DEBUG :: ID : 260955198
+2023-11-10 16:43:51,355 :: ERROR :: ID was not found in provided list
+2023-11-10 16:43:51,357 :: INFO :: --- Starting Record 7
+2023-11-10 16:43:51,357 :: DEBUG :: Record is valid
+2023-11-10 16:43:51,358 :: DEBUG :: ID : 285997
+2023-11-10 16:43:51,360 :: ERROR :: ID was not found in provided list
+2023-11-10 16:43:51,361 :: INFO :: --- Starting Record 8
+2023-11-10 16:43:51,361 :: DEBUG :: Record is valid
+2023-11-10 16:43:51,362 :: DEBUG :: ID : 260959975
+2023-11-10 16:43:51,363 :: ERROR :: ID was not found in provided list
+2023-11-10 16:43:51,364 :: INFO :: --- Starting Record 9
+2023-11-10 16:43:51,365 :: DEBUG :: Record is valid
+2023-11-10 16:43:51,365 :: DEBUG :: ID : 890955175
+2023-11-10 16:43:51,367 :: ERROR :: ID was not found in provided list
+2023-11-10 16:43:51,368 :: INFO :: --- Starting Record 10
+2023-11-10 16:43:51,368 :: DEBUG :: Record is valid
+2023-11-10 16:43:51,369 :: DEBUG :: ID : 777955175
+2023-11-10 16:43:51,371 :: ERROR :: ID was not found in provided list
+2023-11-10 16:43:51,374 :: INFO :: --- Starting Record 11
+2023-11-10 16:43:51,375 :: DEBUG :: Record is valid
+2023-11-10 16:43:51,375 :: DEBUG :: ID : 144525
+2023-11-10 16:43:51,377 :: ERROR :: ID was not found in provided list
+2023-11-10 16:43:51,379 :: INFO :: --- Starting Record 12
+2023-11-10 16:43:51,380 :: DEBUG :: Record is valid
+2023-11-10 16:43:51,380 :: DEBUG :: ID : 121915
+2023-11-10 16:43:51,382 :: ERROR :: ID was not found in provided list
+2023-11-10 16:43:51,382 :: INFO :: Main function just ended
+2023-11-10 16:43:51,384 :: INFO :: <(^-^)> <(^-^)> Script fully executed without errors <(^-^)> <(^-^)>
