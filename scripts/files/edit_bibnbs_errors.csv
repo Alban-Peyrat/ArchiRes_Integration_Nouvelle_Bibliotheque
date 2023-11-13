@@ -1,0 +1,12 @@
+record_nb;ID;error
+1;110821661;Item TYPEDOC is not mapped : LOVECOLOREDMASTERSPARK
+1;110821661;Item itemtype is not mapped : LOVECOLOREDMASTERSPARK
+3;265708354;ID matched multiple lines in provided list
+4;265708354;ID matched multiple lines in provided list
+5;260955175;Multiples biblionumbers provided for this ID
+7;;No ID in the record
+9;890955175;Item has no doctype : 995   $00$20$52014-08-20$9387541$bNRMD$cNRMD$eRECH$fNRMD0000008641$jC 2132$k7.WAD$o4$w2014-08-20
+9;890955175;Item itemtype is not mapped
+10;777955175;Item itemtype is not mapped : DVD
+11;144525;Item TYPEDOC is not mapped : DVDZ
+11;144525;Item itemtype is not mapped : DVDZ

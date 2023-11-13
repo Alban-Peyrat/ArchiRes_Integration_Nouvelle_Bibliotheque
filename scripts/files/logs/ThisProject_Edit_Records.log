@@ -1,66 +1,67 @@
-2023-11-13 13:56:51,279 :: INFO :: Logger initialisé
-2023-11-13 13:56:51,280 :: INFO :: Starting main function...
-2023-11-13 13:56:51,281 :: INFO :: Field created : 801  3$9ThisProject_import$bDBNAME
-2023-11-13 13:56:51,281 :: INFO :: Date : 2023-11-13
-2023-11-13 13:56:51,282 :: INFO :: --- Starting Record 0
-2023-11-13 13:56:51,283 :: DEBUG :: Record is valid
-2023-11-13 13:56:51,283 :: DEBUG :: ID : 266130399
-2023-11-13 13:56:51,286 :: DEBUG :: Biblionumber successfully found : 524582
-2023-11-13 13:56:51,287 :: INFO :: Record fully processed
-2023-11-13 13:56:51,289 :: INFO :: --- Starting Record 1
-2023-11-13 13:56:51,289 :: DEBUG :: Record is valid
-2023-11-13 13:56:51,290 :: DEBUG :: ID : 110821661
-2023-11-13 13:56:51,291 :: DEBUG :: Biblionumber successfully found : 195937
-2023-11-13 13:56:51,293 :: ERROR :: Item itemtype is not mapped : LOVECOLOREDMASTERSPARK
-2023-11-13 13:56:51,294 :: INFO :: Record fully processed
-2023-11-13 13:56:51,296 :: INFO :: --- Starting Record 2
-2023-11-13 13:56:51,297 :: DEBUG :: Record is valid
-2023-11-13 13:56:51,297 :: DEBUG :: ID : 066918855
-2023-11-13 13:56:51,299 :: INFO :: Record fully processed
-2023-11-13 13:56:51,301 :: INFO :: --- Starting Record 3
-2023-11-13 13:56:51,302 :: DEBUG :: Record is valid
-2023-11-13 13:56:51,302 :: DEBUG :: ID : 265708354
-2023-11-13 13:56:51,303 :: ERROR :: ID matched multiple lines in provided list
-2023-11-13 13:56:51,305 :: INFO :: --- Starting Record 4
-2023-11-13 13:56:51,305 :: DEBUG :: Record is valid
-2023-11-13 13:56:51,306 :: DEBUG :: ID : 265708354
-2023-11-13 13:56:51,308 :: ERROR :: ID matched multiple lines in provided list
-2023-11-13 13:56:51,309 :: INFO :: --- Starting Record 5
-2023-11-13 13:56:51,310 :: DEBUG :: Record is valid
-2023-11-13 13:56:51,310 :: DEBUG :: ID : 260955175
-2023-11-13 13:56:51,312 :: ERROR :: Multiples biblionumbers provided for this ID
-2023-11-13 13:56:51,314 :: INFO :: --- Starting Record 6
-2023-11-13 13:56:51,314 :: DEBUG :: Record is valid
-2023-11-13 13:56:51,315 :: DEBUG :: ID : 260955198
-2023-11-13 13:56:51,317 :: INFO :: Record fully processed
-2023-11-13 13:56:51,318 :: INFO :: --- Starting Record 7
-2023-11-13 13:56:51,319 :: DEBUG :: Record is valid
-2023-11-13 13:56:51,319 :: ERROR :: No ID in the record
-2023-11-13 13:56:51,320 :: INFO :: --- Starting Record 8
-2023-11-13 13:56:51,320 :: DEBUG :: Record is valid
-2023-11-13 13:56:51,321 :: DEBUG :: ID : 260959975
-2023-11-13 13:56:51,322 :: DEBUG :: Biblionumber successfully found : 123456
-2023-11-13 13:56:51,324 :: INFO :: Record fully processed
-2023-11-13 13:56:51,326 :: INFO :: --- Starting Record 9
-2023-11-13 13:56:51,327 :: DEBUG :: Record is valid
-2023-11-13 13:56:51,328 :: DEBUG :: ID : 890955175
-2023-11-13 13:56:51,329 :: ERROR :: Item has no doctype : 995   $00$20$52014-08-20$9387541$bNRMD$cNRMD$eRECH$fNRMD0000008641$jC 2132$k7.WAD$o4$w2014-08-20
-2023-11-13 13:56:51,330 :: ERROR :: Item itemtype is not mapped
-2023-11-13 13:56:51,331 :: INFO :: Record fully processed
-2023-11-13 13:56:51,332 :: INFO :: --- Starting Record 10
-2023-11-13 13:56:51,332 :: DEBUG :: Record is valid
-2023-11-13 13:56:51,333 :: DEBUG :: ID : 777955175
-2023-11-13 13:56:51,334 :: ERROR :: Item itemtype is not mapped : DVD
-2023-11-13 13:56:51,335 :: INFO :: Record fully processed
-2023-11-13 13:56:51,338 :: INFO :: --- Starting Record 11
-2023-11-13 13:56:51,338 :: DEBUG :: Record is valid
-2023-11-13 13:56:51,338 :: DEBUG :: ID : 144525
-2023-11-13 13:56:51,342 :: ERROR :: Item TYPEDOC is not mapped : DVDZ
-2023-11-13 13:56:51,343 :: ERROR :: Item itemtype is not mapped : DVDZ
-2023-11-13 13:56:51,343 :: INFO :: Record fully processed
-2023-11-13 13:56:51,347 :: INFO :: --- Starting Record 12
-2023-11-13 13:56:51,348 :: DEBUG :: Record is valid
-2023-11-13 13:56:51,349 :: DEBUG :: ID : 121915
-2023-11-13 13:56:51,351 :: INFO :: Record fully processed
-2023-11-13 13:56:51,353 :: INFO :: Main function just ended
-2023-11-13 13:56:51,354 :: INFO :: <(^-^)> <(^-^)> Script fully executed without errors <(^-^)> <(^-^)>
+2023-11-13 14:40:10,384 :: INFO :: Logger initialisé
+2023-11-13 14:40:10,385 :: INFO :: Starting main function...
+2023-11-13 14:40:10,386 :: INFO :: Field created : 801  3$9ThisProject_import$bDBNAME
+2023-11-13 14:40:10,387 :: INFO :: Date : 2023-11-13
+2023-11-13 14:40:10,388 :: INFO :: --- Starting Record 0
+2023-11-13 14:40:10,388 :: DEBUG :: Record is valid
+2023-11-13 14:40:10,389 :: DEBUG :: ID : 266130399
+2023-11-13 14:40:10,392 :: DEBUG :: Biblionumber successfully found : 524582
+2023-11-13 14:40:10,392 :: INFO :: Record fully processed
+2023-11-13 14:40:10,394 :: INFO :: --- Starting Record 1
+2023-11-13 14:40:10,395 :: DEBUG :: Record is valid
+2023-11-13 14:40:10,395 :: DEBUG :: ID : 110821661
+2023-11-13 14:40:10,397 :: DEBUG :: Biblionumber successfully found : 195937
+2023-11-13 14:40:10,398 :: ERROR :: Item TYPEDOC is not mapped : LOVECOLOREDMASTERSPARK
+2023-11-13 14:40:10,399 :: ERROR :: Item itemtype is not mapped : LOVECOLOREDMASTERSPARK
+2023-11-13 14:40:10,399 :: INFO :: Record fully processed
+2023-11-13 14:40:10,401 :: INFO :: --- Starting Record 2
+2023-11-13 14:40:10,402 :: DEBUG :: Record is valid
+2023-11-13 14:40:10,402 :: DEBUG :: ID : 066918855
+2023-11-13 14:40:10,405 :: INFO :: Record fully processed
+2023-11-13 14:40:10,407 :: INFO :: --- Starting Record 3
+2023-11-13 14:40:10,408 :: DEBUG :: Record is valid
+2023-11-13 14:40:10,409 :: DEBUG :: ID : 265708354
+2023-11-13 14:40:10,410 :: ERROR :: ID matched multiple lines in provided list
+2023-11-13 14:40:10,413 :: INFO :: --- Starting Record 4
+2023-11-13 14:40:10,414 :: DEBUG :: Record is valid
+2023-11-13 14:40:10,414 :: DEBUG :: ID : 265708354
+2023-11-13 14:40:10,415 :: ERROR :: ID matched multiple lines in provided list
+2023-11-13 14:40:10,416 :: INFO :: --- Starting Record 5
+2023-11-13 14:40:10,417 :: DEBUG :: Record is valid
+2023-11-13 14:40:10,417 :: DEBUG :: ID : 260955175
+2023-11-13 14:40:10,418 :: ERROR :: Multiples biblionumbers provided for this ID
+2023-11-13 14:40:10,421 :: INFO :: --- Starting Record 6
+2023-11-13 14:40:10,421 :: DEBUG :: Record is valid
+2023-11-13 14:40:10,422 :: DEBUG :: ID : 260955198
+2023-11-13 14:40:10,425 :: INFO :: Record fully processed
+2023-11-13 14:40:10,427 :: INFO :: --- Starting Record 7
+2023-11-13 14:40:10,428 :: DEBUG :: Record is valid
+2023-11-13 14:40:10,429 :: ERROR :: No ID in the record
+2023-11-13 14:40:10,429 :: INFO :: --- Starting Record 8
+2023-11-13 14:40:10,430 :: DEBUG :: Record is valid
+2023-11-13 14:40:10,430 :: DEBUG :: ID : 260959975
+2023-11-13 14:40:10,431 :: DEBUG :: Biblionumber successfully found : 123456
+2023-11-13 14:40:10,432 :: INFO :: Record fully processed
+2023-11-13 14:40:10,433 :: INFO :: --- Starting Record 9
+2023-11-13 14:40:10,434 :: DEBUG :: Record is valid
+2023-11-13 14:40:10,434 :: DEBUG :: ID : 890955175
+2023-11-13 14:40:10,436 :: ERROR :: Item has no doctype : 995   $00$20$52014-08-20$9387541$bNRMD$cNRMD$eRECH$fNRMD0000008641$jC 2132$k7.WAD$o4$w2014-08-20
+2023-11-13 14:40:10,437 :: ERROR :: Item itemtype is not mapped
+2023-11-13 14:40:10,437 :: INFO :: Record fully processed
+2023-11-13 14:40:10,438 :: INFO :: --- Starting Record 10
+2023-11-13 14:40:10,439 :: DEBUG :: Record is valid
+2023-11-13 14:40:10,439 :: DEBUG :: ID : 777955175
+2023-11-13 14:40:10,442 :: ERROR :: Item itemtype is not mapped : DVD
+2023-11-13 14:40:10,442 :: INFO :: Record fully processed
+2023-11-13 14:40:10,446 :: INFO :: --- Starting Record 11
+2023-11-13 14:40:10,447 :: DEBUG :: Record is valid
+2023-11-13 14:40:10,447 :: DEBUG :: ID : 144525
+2023-11-13 14:40:10,449 :: ERROR :: Item TYPEDOC is not mapped : DVDZ
+2023-11-13 14:40:10,449 :: ERROR :: Item itemtype is not mapped : DVDZ
+2023-11-13 14:40:10,450 :: INFO :: Record fully processed
+2023-11-13 14:40:10,454 :: INFO :: --- Starting Record 12
+2023-11-13 14:40:10,455 :: DEBUG :: Record is valid
+2023-11-13 14:40:10,456 :: DEBUG :: ID : 121915
+2023-11-13 14:40:10,458 :: INFO :: Record fully processed
+2023-11-13 14:40:10,461 :: INFO :: Main function just ended
+2023-11-13 14:40:10,462 :: INFO :: <(^-^)> <(^-^)> Script fully executed without errors <(^-^)> <(^-^)>

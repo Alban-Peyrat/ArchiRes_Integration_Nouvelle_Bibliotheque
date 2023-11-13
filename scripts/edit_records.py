@@ -18,7 +18,7 @@ import archires_coding_convention_resources as accr
 dotenv.load_dotenv()
 FILE_IN = os.getenv("EDIT_RECORDS_FILE_IN")
 FILE_OUT = os.path.dirname(FILE_IN) + "/RECORDS_FOR_KOHA.mrc"
-FILE_ERRORS = os.path.dirname(FILE_IN) + "/edit_records_errors.csv"
+FILE_ERRORS = os.path.dirname(FILE_IN) + "/edit_bibnbs_errors.csv"
 FILE_MAPPING_IDS = os.getenv("EDIT_RECORDS_IDS_MAPPING_FILE")
 ORIGIN_ID_NAME = os.getenv("EDIT_RECORDS_ORIGIN_ID_NAME")
 LOGS_PATH = os.getenv("LOGS_FOLDER")
@@ -140,7 +140,7 @@ for index, record in enumerate(MRC_READER):
         generate_error(Errors.NO_ORIGIN_ID_IN_RECORD, logger, F_ERRORS, index)
         continue
 
-    edit_record = True
+    edit_bibnb = True
     # Checks if a bibnb is provided for this PPN
     if (record["001"]):
         logger.debug(f"ID : {record['001'].data}")
@@ -168,43 +168,45 @@ for index, record in enumerate(MRC_READER):
             # We can edit the record
             bibnb = match.group()
             logger.debug(f"Biblionumber successfully found : {bibnb}") #errors['cell_nan']
-            edit_record = False
+            edit_bibnb = False
     
-    if not edit_record:
+    if not edit_bibnb:
         record["001"].data = bibnb
     else:
         # Deletes fields
         record.remove_fields("001")
-        record.remove_fields("090")
-        record.remove_fields("610")
-        record.remove_fields("098")
-        
-        # Adds a new 801
-        record.add_field(field_801)
+    
+    # Just in case, we should edit the records
+    record.remove_fields("090")
+    record.remove_fields("610")
+    record.remove_fields("098")
+    
+    # Adds a new 801
+    record.add_field(field_801)
 
-        # Edit 099
-        for field in record.get_fields("099"):
-            # Last Sudoc import
-            field.delete_subfield("e")
-            
-            # Koha creation date
-            add_subfield(field, "c", today)
-            
-            # Koha last edit date
-            add_subfield(field, "d", today)
-            
-            # Converts item typedoc to record typedoc
-            if (field["t"]):
-                field.delete_subfield("t")
-            for item in record.get_fields("995"):
-                if not (item["r"]):
-                    generate_error(Errors.NO_DOCTYPE, logger, F_ERRORS, index, origin_id, show_datafield(item))
-                    continue
-                if (item["r"] in TYPEDOC_mapping):
-                    field.add_subfield("t", TYPEDOC_mapping[item["r"]])
-                else:
-                    generate_error(Errors.ITEM_TYPEDOC_NOT_MAPPED, logger, F_ERRORS, index, origin_id, item['r'])
-                    continue
+    # Edit 099
+    for field in record.get_fields("099"):
+        # Last Sudoc import
+        field.delete_subfield("e")
+        
+        # Koha creation date
+        add_subfield(field, "c", today)
+        
+        # Koha last edit date
+        add_subfield(field, "d", today)
+        
+        # Converts item typedoc to record typedoc
+        if (field["t"]):
+            field.delete_subfield("t")
+        for item in record.get_fields("995"):
+            if not (item["r"]):
+                generate_error(Errors.NO_DOCTYPE, logger, F_ERRORS, index, origin_id, show_datafield(item))
+                continue
+            if (item["r"] in TYPEDOC_mapping):
+                field.add_subfield("t", TYPEDOC_mapping[item["r"]])
+            else:
+                generate_error(Errors.ITEM_TYPEDOC_NOT_MAPPED, logger, F_ERRORS, index, origin_id, item['r'])
+                continue
                     
     # ---------- Items ----------
     for item in record.get_fields("995"):

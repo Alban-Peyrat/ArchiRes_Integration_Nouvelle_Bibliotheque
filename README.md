@@ -14,6 +14,10 @@ Une attention particulière est à porter sur les ressources numériques qu'il f
 
 Afin d'être le plus claire possible, ne pas hésiter à doubler des explications textuelles par des diagrammes, parfois en deux versions : une version détaillée complétée par une version simple pour des interlocuteurs qui n'ont pas les compétences techniques ou les connaissances requises pour comprendre la version originale.
 
-## Koha
+## Intégration des notices dans Koha
 
-_[Consulter le document dédié](./Koha.md)_
+_[Consulter le document dédié](./Koha_integrations_biblio.md)_
+
+## Modification des exemplaires déjà présents dans Koha
+
+_[Consulter le document dédié](./Koha_modif_exemplaires.md)_
