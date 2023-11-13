@@ -41,7 +41,8 @@ TYPEDOC_mapping = {
     "LIVRE":"LIV",
     "PERI":"REV",
     "THESE":"TE",
-    "LIV":"LIV"
+    "LIV":"LIV",
+    "DVD":"AUDIOV"
     }
 
 itemtype_mapping = {
@@ -132,7 +133,9 @@ for index, record in enumerate(MRC_READER):
     logger.debug("Record is valid")
     
     # ---------- Record ----------
-    origin_id = record["001"].data
+    origin_id = None
+    if record["001"]:
+        origin_id = record["001"].data
     if not origin_id:
         generate_error(Errors.NO_ORIGIN_ID_IN_RECORD, logger, F_ERRORS, index)
         continue
