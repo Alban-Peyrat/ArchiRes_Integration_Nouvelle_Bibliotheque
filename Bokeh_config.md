@@ -130,7 +130,7 @@ Configurer le menu du profil général, spécifiquement le _Menu principal_ :
 * Ajouter au sous menu _Réseau ArchiRès → Les bibliothèques des ENSAP_ un lien vers un site
 * Modifier le nouveau lien :
   * Texte du lien : `{libellé publique de l'école}`
-  * Adresse web : `/{qualificatif court}`
+  * Adresse web : `/{URL personnalisée de la bibliothèque}`
   * Navigation : `Rester sur le même onglet`
 
 __[Si profil spécifique]__ Dupliquer le profil de l'ENSA de Bretagne :
