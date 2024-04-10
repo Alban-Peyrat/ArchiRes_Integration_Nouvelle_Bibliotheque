@@ -4,7 +4,7 @@
 
 ### Exporateur de fichiers
 
-* Dans le sous-dossier _bannieres_, téléverser le logo de l'école
+* __[Si profil spécifique]__ Dans le sous-dossier _bannieres_, téléverser le logo de l'école
 * Dans le sous-dossier _photobib_ (utilsier la recherche), téléverser une illustration de la bibliothèque
 
 ### Champs personnalisés
@@ -73,7 +73,7 @@ Une fois validées, sur la page listant les bibliothèques, remplir les plages d
 
 * Dans la catégorie portant le nom de la bibliothèque, attribuer les deux permissions aux _Admin bib_
 * Créer quatre sous-dossiers à cette catégorie :
-  * _Accueil_ (s'il y a un profil associé)
+  * __[Si profil spécifique]__ _Accueil_
   * _Actualités_
   * _Actualités : réseau_
   * _FAQ_
