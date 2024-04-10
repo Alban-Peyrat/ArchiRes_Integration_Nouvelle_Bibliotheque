@@ -13,7 +13,7 @@ Ajouter les liens vers le site des bibliothèques et le profil si nécessaire (v
 
 * _Dans Bibliothèques → Tags bibliothèques_
 * Lien vers le site de la bibliothèque : `<a href="{page dédiée à la bibliothèque du site de l'école}" target="_blank"> Consulter le site de la bibliothèque de {ville}</a>`
-* Lien vers le profil ArchiRès : `<a href="/{URL profil}"> visiter la page ArchiRès de la bibliothèque</a>`
+* __[Si profil spécifique]__ Lien vers le profil ArchiRès : `<a href="/{URL profil}"> visiter la page ArchiRès de la bibliothèque</a>`
 
 ### Lieux
 
@@ -65,7 +65,7 @@ _Administration du portail → Bibliothèques → Ajouter une bibliothèque_ :
   * Services : _à remplir en lien / par l'équipe de la bibliothèque_
   * Laboratoires de recherche : _à remplir en lien / par l'équipe de la bibliothèque_
   *  Site Web à remplir : _à remplir en lien / par l'équipe de la bibliothèque_
-  * Tags bibliothèque : sélectionner les deux tags créés précédemment
+  * Tags bibliothèque : sélectionner le tag pointant sur le site de la bibliothèque puis celui pointant vers le profil ArchiRès pertinent
 
 Une fois validées, sur la page listant les bibliothèques, remplir les plages d'ouvertures en lien / par l'équipe de la bibliothèque.
 
@@ -77,7 +77,7 @@ Une fois validées, sur la page listant les bibliothèques, remplir les plages d
   * _Actualités_
   * _Actualités : réseau_
   * _FAQ_
-* (Si profil associé) Créer un article dans le sous-dossier _Accueil_ :
+* __[Si profil spécifique]__ Créer un article dans le sous-dossier _Accueil_ :
   * Onglet _Publication_ :
     * Titre : _Accès rapides_
   * Onglet _Article_ :
@@ -86,7 +86,7 @@ Une fois validées, sur la page listant les bibliothèques, remplir les plages d
 
 ### Domaines
 
-* Dans _Portail → Filtre écoles_, ajouter un sous-domaine :
+* __[Si profil spécifique]__ Dans _Portail → Filtre écoles_, ajouter un sous-domaine :
   * Libellé : ` - {libellé public}` __(il y a un espace avant le tiret)__
   * Onglet _Localisations_ → __Bibliothèques__ : ajouter la bibliothèque (et d'autres si nécessaires)
   * Onglet _Autres_ → _Peut être un favori utilisateur_ : _Oui_
@@ -94,7 +94,7 @@ Une fois validées, sur la page listant les bibliothèques, remplir les plages d
   * Localisations → __Annexes__ : rajouter la bibliothèque (et d'autres si nécessaires)
 * Pour le dossier de la bibliothèque, créer un nouveau domaine :
   * Libellé : `Nouvelles acquisitions`
-  * Copier les paramètres des domaines des nouveautés (voir `ArchIRes_Structure_Technique / Bokeh / nouveautes.md`), copie du contenu au 2024-03-29 :
+  * Copier les paramètres des domaines des nouveautés (voir `ArchiRes_Structure_Technique / Bokeh / nouveautes.md`), copie du contenu au 2024-03-29 :
     * Formulaire personnalisé : _AlP_Domain_Nouveautes_
     * Année de parution >= : __2023__ (année à modifier selon l'année)
     * Nouveauté uniquement : __OUI__
@@ -116,14 +116,14 @@ Une fois validées, sur la page listant les bibliothèques, remplir les plages d
 
 _Rappel : elles se définissent dans l'entrée de menu_ Domaines
 
-* Modifier _Dans toutes les bibliothèques_ et ajouter au bon emplacement le domaine qui a été ajouté à _Portail → Filtres écoles_
+* __[Si profil spécifique]__ Modifier _Dans toutes les bibliothèques_ et ajouter au bon emplacement le domaine qui a été ajouté à _Portail → Filtres écoles_
 
 ### Profil
 
 Modifier la page d'accueil du profil général :
 
 * Ajouter dans la boîte d'articles _Actualités du réseau_ le dossier des actualités du réseau de la bibliothèque
-* Modifier la liste des bibliothèques affichées dans la boîte des bibliothèques _La bibliothèque Accès & Horaires d'Ouverture_ ppour y rajouter la bibliothèque
+* Modifier la liste des bibliothèques affichées dans la boîte des bibliothèques _La bibliothèque Accès & Horaires d'Ouverture_ pour y rajouter la bibliothèque
 
 Configurer le menu du profil général, spécifiquement le _Menu principal_ :
 
@@ -133,7 +133,7 @@ Configurer le menu du profil général, spécifiquement le _Menu principal_ :
   * Adresse web : `/{qualificatif court}`
   * Navigation : `Rester sur le même onglet`
 
-Dupliquer le profil de l'ENSA de Bretagne :
+__[Si profil spécifique]__ Dupliquer le profil de l'ENSA de Bretagne :
 
 * Libellé : `{libellé publique de l'école}`
 * URL du profil : `{nom de l'école séparés avec des tirets (sauf lavillette et valdeseine)}`
@@ -170,7 +170,7 @@ Modifier la page d'accueil du nouveau profil :
   * Supprimer le dossier _FAQ_ __de l'ENSA de Bretagne__
   * Rajouter le dossier _FAQ_ de l'école
 
-Modifier la page _FAQ - Bretagne_ :
+Modifier la page _FAQ - Bretagne_ du nouveau profil :
 
 * Libellé : `FAQ - {quelificatif court}`
 * URL de la page : `faq-{quelificatif court}`
@@ -179,7 +179,7 @@ Modifier la page _FAQ - Bretagne_ :
   * Supprimer le dossier _FAQ_ __de l'ENSA de Bretagne__
   * Rajouter le dossier _FAQ_ de l'école
 
-Modifier la page _Accès Thématiques - Bretagne_ :
+Modifier la page _Accès Thématiques - Bretagne_ du nouveau profil :
 
 * Libellé : `Accès Thématiques - {qualificatif court}`
 * URL de la page : `acces-thematiques-{qualificatif court}`
