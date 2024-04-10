@@ -7,6 +7,14 @@
 * Dans le sous-dossier _bannieres_, téléverser le logo de l'école
 * Dans le sous-dossier _photobib_ (utilsier la recherche), téléverser une illustration de la bibliothèque
 
+### Champs personnalisés
+
+Ajouter les liens vers le site des bibliothèques et le profil si nécessaire (voir `ArchiRes_Structure_Technique / Bokeh / champs_personnalises.md`), copie du contenu au 2024-04-10 :
+
+* _Dans Bibliothèques → Tags bibliothèques_
+* Lien vers le site de la bibliothèque : `<a href="{page dédiée à la bibliothèque du site de l'école}" target="_blank"> Consulter le site de la bibliothèque de {ville}</a>`
+* Lien vers le profil ArchiRès : `<a href="/{URL profil}"> visiter la page ArchiRès de la bibliothèque</a>`
+
 ### Lieux
 
 Ajouter autant de lieux que nécessaire (si nécessaire, un laboratoire situé au sein d'une école n'a pas a donné lieu à un nouveau _lieu_).
@@ -57,9 +65,9 @@ _Administration du portail → Bibliothèques → Ajouter une bibliothèque_ :
   * Services : _à remplir en lien / par l'équipe de la bibliothèque_
   * Laboratoires de recherche : _à remplir en lien / par l'équipe de la bibliothèque_
   *  Site Web à remplir : _à remplir en lien / par l'équipe de la bibliothèque_
-||||||||||||||| * __Tags bibliothèque__ : |||
+  * Tags bibliothèque : sélectionner les deux tags créés précédemment
 
-Une fois validées, sur la page listant les bibliothèques, remplir les plages d'ouvertures en lien / par l'équip de la bibliothèque.
+Une fois validées, sur la page listant les bibliothèques, remplir les plages d'ouvertures en lien / par l'équipe de la bibliothèque.
 
 ### Articles
 
@@ -104,15 +112,22 @@ Une fois validées, sur la page listant les bibliothèques, remplir les plages d
       * __OU__ Etat Exemplaire __Consultable en ligne__
       * __OU__ Etat Exemplaire __Consultable sur place__
 
+### Facettes dynamiques
+
+_Rappel : elles se définissent dans l'entrée de menu_ Domaines
+
+* Modifier _Dans toutes les bibliothèques_ et ajouter au bon emplacement le domaine qui a été ajouté à _Portail → Filtres écoles_
+
 ### Profil
 
 Modifier la page d'accueil du profil général :
 
 * Ajouter dans la boîte d'articles _Actualités du réseau_ le dossier des actualités du réseau de la bibliothèque
+* Modifier la liste des bibliothèques affichées dans la boîte des bibliothèques _La bibliothèque Accès & Horaires d'Ouverture_ ppour y rajouter la bibliothèque
 
-Configurer le menu du profil général, spécidfiquement le _Menu principal_ :
+Configurer le menu du profil général, spécifiquement le _Menu principal_ :
 
-* Ajouter au sous menu _Réseau ArchiRès → Les biblithèques des ENSAP_ un lien vers un site
+* Ajouter au sous menu _Réseau ArchiRès → Les bibliothèques des ENSAP_ un lien vers un site
 * Modifier le nouveau lien :
   * Texte du lien : `{libellé publique de l'école}`
   * Adresse web : `/{qualificatif court}`
@@ -132,6 +147,10 @@ Dupliquer le profil de l'ENSA de Bretagne :
 
 Modifier la page d'accueil du nouveau profil :
 
+* Modifier la boîte de recherche _Trouver un document_ :
+  * Onglet _Sélection_ :
+    * Retirer le domaine _Filtre écoles / ENSA Bretagne_
+    * Rajouter le filtre école pertinent
 * Modifier la boite image _Logo Ecole_ :
   * Onglet _Sélection_ :
     * Sélectionner une image : `/userfiles/bannieres/{logo de l'école}`
@@ -165,6 +184,16 @@ Modifier la page _Accès Thématiques - Bretagne_ :
 * Libellé : `Accès Thématiques - {qualificatif court}`
 * URL de la page : `acces-thematiques-{qualificatif court}`
 
+### Comptes contributeurs
+
+* Créer des comptes contibuteurs pour les professionnels qui en auront le besoin (voir `ArchiRes_Structure_Technique / Gestion_comptes / role_et_droits / Bokeh_comptes_professionnels.md`), copie du contenu au 2024-04-10 :
+  * Onglet Droits :
+    * Niveau d'accès = `Administrateur bibliothèque`
+    * Bibliothèque = la bibliothèque du contributeur
+    * Groupes : se rempliront automatiquement de :
+      * `Admin Bib` (_Groupes → Droits d'accès aux articles_)
+      * `Administrateur bibliothèque` (_Groupes → Accès aux lettres d'informations_)
+
 ## Dans le Cosmogramme
 
 ### Annexes
@@ -178,27 +207,3 @@ _Configuration → Annexes → Ajouter une annexe_ :
 * Libellé : _Nom public de la bibliothèque_
 * Rejeter les exemplaires : _Ø_
 * Exclu du PEB : _Ø_
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Comptes contributeurs
-
-* |||Création des comptes contributeurs
