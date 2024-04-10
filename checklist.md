@@ -1,5 +1,15 @@
 # Listes des points à traiter lors de l'intégration
 
+## Configuration de Matomo
+
+* [] __[Si profil spécifique]__ Créer l'objectif pour les nouvelles acquisitions
+* [] __[Si profil spécifique]__ Créer l'objectif pour les accès rapides
+* [] __[Si profil spécifique]__ Ajouter l'identifiant de l'objectif des accès rapides à la liste dans la documentation des accès rapides et dans la macro pour l'utilitaire (`ArchiRès_Structure_Technique / Bokeh / articles / acces_rapides.md`)
+
+## Configuration de RESANA
+
+* [] __[Si profil spécifique]__ modifier macro + créer feuille
+
 ## Configuration de Bokeh
 
 ### Partie Administration
