@@ -4,39 +4,69 @@
 import os
 import re
 import dotenv
+import csv
+from enum import Enum
 
 # internal imports
-import api.koha.Koha_SRU as Koha_SRU
-import archires_coding_convention_resources as accr
+import api.koha.Koha_SRU as ksru
+import fcr_func as fcf
 
 dotenv.load_dotenv()
 
-KOHA_URL = accr.erase_trailing_slash(os.getenv("KOHA_ARCHIRES_SRU"))
+KOHA_URL = os.getenv("KOHA_SRU")
+sru = ksru.Koha_SRU(KOHA_URL, ksru.SRU_Version.V1_1)
 FILE_PATH = os.getenv("PPN_IN_KOHA_FILE_IN")
-OUTPUT_PATH = os.path.dirname(FILE_PATH) + "/PPN_in_ArchiRes.csv"
+OUTPUT_PATH = os.getenv("PPN_IN_KOHA_OUTPUT_FILE")
 
-with open(OUTPUT_PATH, "w", encoding="utf-8") as f_out:
-    f_out.write("PPN;nb_match;bibnb\n")
+class Output_Headers(Enum):
+    PPN = "ppn"
+    NB_MATCH = "nb_match"
+    BIBNB = "bibnb"
+
+with open(OUTPUT_PATH, "w", encoding="utf-8", newline="") as f_out:
+    WRITER = csv.DictWriter(f_out, extrasaction="ignore", fieldnames=[elem.value for elem in Output_Headers], delimiter=";")
+    WRITER.writeheader()
     with open(FILE_PATH, "r", encoding="utf-8") as f:
         for row in f.readlines():
             # Normalize PPN
             ppn = re.sub(r"[^\dX]", "", row)
             while len(ppn) < 9:
                 ppn = "0" + ppn
-            print(ppn)
 
-            output = [str(ppn)]
-            if ppn != "NULL":
-                res = Koha_SRU.Koha_SRU(f"dc.identifier all {ppn}", KOHA_URL, version="2.0")
-                
-                output.append(str(res.get_nb_results()))
-                if output[1] == "0":
-                    output.append("")
-                else:
-                    output.append(str(res.get_records_id())[1:-1])
+            output = {
+                Output_Headers.PPN.value:str(ppn),
+                Output_Headers.NB_MATCH.value:"",
+                Output_Headers.BIBNB.value:""
+            }
 
-            else:
-                output.append("SKIPPED")
-                output.append("")
+            # If PPN == NULL, leave
+            if ppn == "NULL":
+                output[Output_Headers.NB_MATCH.value] = "SKIPPED"
+                WRITER.writerow(output)
+                continue
 
-            f_out.write(";".join(output) + "\n")
+            # If PPN would end up making an empty request, leave
+            ppn = fcf.delete_for_sudoc(ppn).strip()
+            if ppn == "":
+                output[Output_Headers.NB_MATCH.value] = "EMPTY"
+                WRITER.writerow(output)
+                continue
+
+            # Queries the SRU
+            sru_request = [ksru.Part_Of_Query(ksru.SRU_Indexes.DC_IDENTIFIER,ksru.SRU_Relations.EQUALS, ppn)]
+            res = sru.search(
+                sru.generate_query(sru_request),
+                record_schema=ksru.SRU_Record_Schemas.MARCXML,
+                start_record=1,
+                maximum_records=10
+            )
+            # SRU Error
+            if (res.status == "Error"):
+                output[Output_Headers.NB_MATCH.value] = "SRU_ERROR"
+                WRITER.writerow(output)
+                continue
+            
+            # SRU Success
+            output[Output_Headers.NB_MATCH.value] = len(res.get_records_id())
+            output[Output_Headers.BIBNB.value] = ", ".join(res.get_records_id())
+            WRITER.writerow(output)
