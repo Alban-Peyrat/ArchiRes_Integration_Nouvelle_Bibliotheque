@@ -41,14 +41,14 @@ with open(OUTPUT_PATH, "w", encoding="utf-8", newline="") as f_out:
 
             # If PPN == NULL, leave
             if ppn == "NULL":
-                output[Output_Headers.NB_MATCH.value] = "SKIPPED"
+                output[Output_Headers.BIBNB.value] = "SKIPPED_PPN"
                 WRITER.writerow(output)
                 continue
 
             # If PPN would end up making an empty request, leave
             ppn = fcf.delete_for_sudoc(ppn).strip()
             if ppn == "":
-                output[Output_Headers.NB_MATCH.value] = "EMPTY"
+                output[Output_Headers.BIBNB.value] = "EMPTY_PPN"
                 WRITER.writerow(output)
                 continue
 
@@ -62,7 +62,7 @@ with open(OUTPUT_PATH, "w", encoding="utf-8", newline="") as f_out:
             )
             # SRU Error
             if (res.status == "Error"):
-                output[Output_Headers.NB_MATCH.value] = "SRU_ERROR"
+                output[Output_Headers.BIBNB.value] = "SRU_ERROR"
                 WRITER.writerow(output)
                 continue
             
