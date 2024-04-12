@@ -31,8 +31,8 @@ class Output_File(object):
 
 class Matched_ids(object):
     def __init__(self, origin_id:str, target_id:str) -> None:
-        self.origin_id = origin_id
-        self.target_id = target_id
+        self.origin_id = str(origin_id).strip()
+        self.target_id = str(target_id).strip()
     
     def to_dict(self) -> dict:
         return {
