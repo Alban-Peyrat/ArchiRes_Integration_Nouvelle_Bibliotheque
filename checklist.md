@@ -1,5 +1,21 @@
 # Listes des points à traiter lors de l'intégration
 
+## Intégration des notices bibliographiques & exemplaires dans Koha
+
+* [] Modifier les données MARC pour une intégration dans ArchiRès (hors `4XX`, code-barres et biblionumbers)
+* [] Valider les données MARC pour la base de données ArchiRès
+* [] Ajouter les liens aux `4XX` sur les données existantes
+* [] Identifier les code-barres déjà présents dans Koha
+* [] Alignement des notices via FCR
+* [] Génération du fichier d'alignements à partir des fichiers d'analyse de FCR
+* [] Générer les code-barres fictifs et ajouter les biblionumbers aux notices
+* [] Générer le fichier CSV des exemplaires
+* [] Identifier à nouveau si des code-barres sont déjà présents dans Koha
+* [] Intégrer les nouvelles notices bibliographiques
+* [] Exemplariser les documents déjà présents dans Koha
+* [] Vérifier que tout s'est correctement déroulé
+* [] _Facultatif_ Modifier les notices avec des `4XX` non liées
+
 ## Configuration de Matomo
 
 * [] __[Si profil spécifique]__ Créer l'objectif pour les nouvelles acquisitions
