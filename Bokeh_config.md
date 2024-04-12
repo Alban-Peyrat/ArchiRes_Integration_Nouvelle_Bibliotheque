@@ -84,6 +84,29 @@ Une fois validées, sur la page listant les bibliothèques, remplir les plages d
     * Cliquez sur _Source_
     * Coller l'accès rapide (voir l'utilitaire dans RESANA)
 
+
+### Article d'aide à l'activation de son compte
+
+* _Modifier l'article à la source (`ArchiRes_Structure_Techinque → Bokeh → Articles → HTML_files → infos_compte → inscrits_ensa.html`) puis appliquer les changements sur l'article en production_
+* Ajouter les identifiants utilisés dans la partie Javacript de l'article :
+
+``` JS
+let ar_userids = { // Dans cette variable
+    CODE:"prenom.nom",
+};
+// Où "CODE" est le code site de Koha
+// Où "prenom.nom" est la forme utilisée (voir la variable juste en-dessous ↓)
+
+// ----- Si la forme utilisé n'existe pas déjà, rajouter un exemple -----
+let ar_userid_examples = {
+    "prenom.nom":"louise.valliere"
+};
+```
+
+* Modifier l'article _Portail → Infos-compte → inscrits_ensa_ :
+  * Cliquez sur _Source_
+  * Coller le contenu du fichier HTML qui vient d'être modifié
+
 ### Domaines
 
 * __[Si profil spécifique]__ Dans _Portail → Filtre écoles_, ajouter un sous-domaine :
@@ -172,8 +195,8 @@ Modifier la page d'accueil du nouveau profil :
 
 Modifier la page _FAQ - Bretagne_ du nouveau profil :
 
-* Libellé : `FAQ - {quelificatif court}`
-* URL de la page : `faq-{quelificatif court}`
+* Libellé : `FAQ - {qualificatif court}`
+* URL de la page : `faq-{qualificatif court}`
 * __Valider__ (sinon les modifications ne seront pas enregistrées)
 * Modifier la boîte d'articles _FAQ_ :
   * Supprimer le dossier _FAQ_ __de l'ENSA de Bretagne__

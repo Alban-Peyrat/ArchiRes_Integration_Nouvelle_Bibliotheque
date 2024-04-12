@@ -29,6 +29,8 @@
   * [] Attribuer les permissions aux _Admin bib_ pour le dossier de l'école
   * [] Créer les sous-dossiers
   * [] __[Si profil spécifique]__ Créer l'article des accès rapides
+  * [] Modifier l'article sur comment se connecter à ArchiRès dans `ArchiRes_Structure_Technique`
+  * [] Modifier sur Bokeh l'article sur comment se connecter à ArchiRès dans `ArchiRes_Structure_Technique`
 * [] Domaines :
   * [] __[Si profil spécifique]__ Creér le domaine dans _Portail → Filtres écoles_
   * [] Modifier le domaine _Catalogue commun des ENSA_
@@ -49,3 +51,12 @@
 ### Partie Cosmogramme
 
 * [] Ajouter autant d'annexes que de sites Koha
+
+## Configuration du Git de Bokeh
+
+* [] __[Si profil spécifique]__ Ajouter la facette au sélecteur des catalogues dans le formulaire de recherche avancée
+* [] __[Si profil spécifique]__ Ajouter la réécriture des liens vers les accès thématiques de l'école
+* [] __[Si profil spécifique]__ Ajouter la réécriture des liens vers la FAQ de l'école
+* [] Ajouter une bibliothèque au mapping des bibliothèques _(probablement facultatif pour les laboratoires)_
+* [] Vérifier & modifier si nécessaire le sélecteur CSS pour le formulaire de pré-inscription
+* [] __[Si profil spécifique]__ Masquer le bouton de retour à l'école sur la page d'accueil de l'école
