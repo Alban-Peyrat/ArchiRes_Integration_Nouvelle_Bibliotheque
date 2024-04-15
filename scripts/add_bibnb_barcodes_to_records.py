@@ -100,7 +100,7 @@ for record_index, record in enumerate(MARC_READER):
             ERR_MAN.trigger_error(record_index, record_id, Errors.TOO_MUCH_BARCODES, "Multiple barcodes were found for this item", field)
             continue
 
-        barcode = f"{BARCODE_PREFIX}A{BARCODE_CITY}{str(record_id).replace(PREPEND_TARGET_DB_ID, '')}I{str(item_index)}"
+        barcode = f"{BARCODE_PREFIX}A{BARCODE_CITY}{str(record_id).replace(PREPEND_ORIGIN_DB_ID, '')}I{str(item_index)}"
         
         # If no barcode is found, adds it
         if not (field["f"]):
