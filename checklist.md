@@ -9,8 +9,9 @@
 * [] Alignement des notices via FCR
 * [] Génération du fichier d'alignements à partir des fichiers d'analyse de FCR
 * [] Générer les code-barres fictifs et ajouter les biblionumbers aux notices
-* [] Générer le fichier CSV des exemplaires
 * [] Identifier à nouveau si des code-barres sont déjà présents dans Koha
+* [] Séparer les notices selon la procédure de traitement
+* [] Générer le fichier CSV des exemplaires
 * [] Intégrer les nouvelles notices bibliographiques
 * [] Exemplariser les documents déjà présents dans Koha
 * [] Vérifier que tout s'est correctement déroulé
