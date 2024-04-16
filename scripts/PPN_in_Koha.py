@@ -9,7 +9,7 @@ from enum import Enum
 
 # internal imports
 import api.koha.Koha_SRU as ksru
-import fcr_func as fcf
+import utils.fcr_func as fcf
 
 dotenv.load_dotenv()
 

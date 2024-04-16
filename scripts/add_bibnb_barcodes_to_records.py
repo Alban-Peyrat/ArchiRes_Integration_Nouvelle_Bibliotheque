@@ -9,7 +9,7 @@ from enum import Enum
 import csv
 
 # Internal import
-from errors_manager import Errors_Manager, Errors
+from utils.errors_manager import Errors_Manager, Errors
 
 # ---------- Init ----------
 load_dotenv()
