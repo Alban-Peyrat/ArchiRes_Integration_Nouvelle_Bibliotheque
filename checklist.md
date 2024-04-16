@@ -2,16 +2,16 @@
 
 ## Intégration des notices bibliographiques & exemplaires dans Koha
 
-* [] Modifier les données MARC pour une intégration dans ArchiRès (hors `4XX`, code-barres et biblionumbers)
-* [] Valider les données MARC pour la base de données ArchiRès
-* [] Ajouter les liens aux `4XX` sur les données existantes
-* [] Identifier les code-barres déjà présents dans Koha
-* [] Alignement des notices via FCR
-* [] Génération du fichier d'alignements à partir des fichiers d'analyse de FCR
-* [] Générer les code-barres fictifs et ajouter les biblionumbers aux notices
-* [] Identifier à nouveau si des code-barres sont déjà présents dans Koha
-* [] Séparer les notices selon la procédure de traitement
-* [] Générer le fichier CSV des exemplaires
+* [] __[010]__ Modifier les données MARC pour une intégration dans ArchiRès (hors `4XX`, code-barres et biblionumbers)
+* [] __[020]__ Valider les données MARC pour la base de données ArchiRès
+* [] __[030]__ Ajouter les liens aux `4XX` sur les données existantes
+* [] __[040]__ Identifier les code-barres déjà présents dans Koha
+* [] __[050]__ Alignement des notices via FCR
+* [] __[060]__ Génération du fichier d'alignements à partir des fichiers d'analyse de FCR
+* [] __[070]__ Générer les code-barres fictifs et ajouter les biblionumbers aux notices
+* [] __[080]__ Identifier à nouveau si des code-barres sont déjà présents dans Koha
+* [] __[090]__ Séparer les notices selon la procédure de traitement
+* [] __[100]__ Générer le fichier CSV des exemplaires
 * [] Intégrer les nouvelles notices bibliographiques
 * [] Exemplariser les documents déjà présents dans Koha
 * [] Vérifier que tout s'est correctement déroulé

@@ -1,0 +1,3 @@
+FCR_results_msplit00000001.xlsx - "tout" does not have columns : Remarques
+FCR_results_msplit00000001.xlsx - "1_valides_horsdoublons" does not have columns : Remarques
+FCR_results_msplit00000001.xlsx - "ignorer_requetes" does not have columns : Remarques, ID origin DB, ID target DB
