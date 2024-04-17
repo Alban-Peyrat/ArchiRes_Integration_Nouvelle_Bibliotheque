@@ -1,0 +1,10 @@
+index;id;error;error_message;data
+27;FICTIF101;DUPLICATE_SUBFIELD_099;The same subfield was found multiple times in the 099;$t : 2
+28;;NO_RECORD_ID;No Kentika number was found in the record;
+29;FICTIF103;NO_ARCHIRES_DOCTYPE;ArchiRès document type was not found;
+30;FICTIF104;NO_100;No 100 was found in the record;
+31;FICTIF105;NO_100_A;No $a was found in the first 100 found in the record;=100  \\$z19990805afrey50 m  y0freyUTF8    ba 
+33;FICTIF107;NO_971;No 971 was found in the record;
+34;FICTIF108;NO_ORIGIN_DB_DOCTYPE;Kentika document type was not found;=971  \\$9Kentika_ENSP
+35;FICTIF109;NO_101;No 101 was found in the record;
+36;FICTIF110;NO_101_A;No $a was found in the first 101 found in the record;=101  \\$zfre

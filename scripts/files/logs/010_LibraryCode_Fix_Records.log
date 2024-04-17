@@ -1,0 +1,205 @@
+2024-04-17 11:26:55,686 :: INFO :: Logger initialised
+2024-04-17 11:26:55,687 :: INFO :: Input file : C:/Path/To/Folder/scripts/files/010_original_records.mrc
+2024-04-17 11:26:55,687 :: INFO :: Output file : C:/Path/To/Folder/scripts/files\010_FIXED_010_original_records.mrc
+2024-04-17 11:26:55,688 :: INFO :: Error file : C:/Path/To/Folder/scripts/files/010_fix_records_errors.csv
+2024-04-17 11:26:55,689 :: INFO :: Starting main function...
+2024-04-17 11:26:55,691 :: INFO :: --- Starting Record 0
+2024-04-17 11:26:55,692 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,693 :: DEBUG :: Kentika number : 75109
+2024-04-17 11:26:55,694 :: DEBUG :: ArchiRès doctype : REV
+2024-04-17 11:26:55,695 :: INFO :: Skipping this record because its ArchiRès doctype is REV
+2024-04-17 11:26:55,697 :: INFO :: --- Starting Record 1
+2024-04-17 11:26:55,698 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,699 :: DEBUG :: Kentika number : 2576
+2024-04-17 11:26:55,700 :: DEBUG :: ArchiRès doctype : Chapitre
+2024-04-17 11:26:55,700 :: INFO :: Skipping this record because its ArchiRès doctype is Chapitre
+2024-04-17 11:26:55,703 :: INFO :: --- Starting Record 2
+2024-04-17 11:26:55,704 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,705 :: DEBUG :: Kentika number : 2675
+2024-04-17 11:26:55,705 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,710 :: INFO :: Record fully processed
+2024-04-17 11:26:55,712 :: INFO :: --- Starting Record 3
+2024-04-17 11:26:55,713 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,714 :: DEBUG :: Kentika number : 247
+2024-04-17 11:26:55,714 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,717 :: INFO :: Record fully processed
+2024-04-17 11:26:55,719 :: INFO :: --- Starting Record 4
+2024-04-17 11:26:55,720 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,721 :: DEBUG :: Kentika number : 75921
+2024-04-17 11:26:55,722 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,725 :: INFO :: Record fully processed
+2024-04-17 11:26:55,727 :: INFO :: --- Starting Record 5
+2024-04-17 11:26:55,728 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,729 :: DEBUG :: Kentika number : 6675
+2024-04-17 11:26:55,730 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,735 :: INFO :: Record fully processed
+2024-04-17 11:26:55,738 :: INFO :: --- Starting Record 6
+2024-04-17 11:26:55,739 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,740 :: DEBUG :: Kentika number : 61129
+2024-04-17 11:26:55,741 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,743 :: INFO :: Record fully processed
+2024-04-17 11:26:55,746 :: INFO :: --- Starting Record 7
+2024-04-17 11:26:55,746 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,747 :: DEBUG :: Kentika number : 49147
+2024-04-17 11:26:55,748 :: DEBUG :: ArchiRès doctype : TE
+2024-04-17 11:26:55,751 :: INFO :: Record fully processed
+2024-04-17 11:26:55,754 :: INFO :: --- Starting Record 8
+2024-04-17 11:26:55,755 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,755 :: DEBUG :: Kentika number : 323
+2024-04-17 11:26:55,756 :: DEBUG :: ArchiRès doctype : ART
+2024-04-17 11:26:55,760 :: INFO :: Record fully processed
+2024-04-17 11:26:55,764 :: INFO :: --- Starting Record 9
+2024-04-17 11:26:55,765 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,766 :: DEBUG :: Kentika number : 50
+2024-04-17 11:26:55,768 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,770 :: INFO :: Record fully processed
+2024-04-17 11:26:55,773 :: INFO :: --- Starting Record 10
+2024-04-17 11:26:55,774 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,775 :: DEBUG :: Kentika number : 351
+2024-04-17 11:26:55,777 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,779 :: INFO :: Record fully processed
+2024-04-17 11:26:55,783 :: INFO :: --- Starting Record 11
+2024-04-17 11:26:55,783 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,784 :: DEBUG :: Kentika number : 76759
+2024-04-17 11:26:55,785 :: DEBUG :: ArchiRès doctype : TE
+2024-04-17 11:26:55,794 :: INFO :: Record fully processed
+2024-04-17 11:26:55,797 :: INFO :: --- Starting Record 12
+2024-04-17 11:26:55,798 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,799 :: DEBUG :: Kentika number : 1175
+2024-04-17 11:26:55,800 :: DEBUG :: ArchiRès doctype : TE
+2024-04-17 11:26:55,803 :: INFO :: Record fully processed
+2024-04-17 11:26:55,806 :: INFO :: --- Starting Record 13
+2024-04-17 11:26:55,806 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,808 :: DEBUG :: Kentika number : 74521
+2024-04-17 11:26:55,809 :: DEBUG :: ArchiRès doctype : TE
+2024-04-17 11:26:55,812 :: INFO :: Record fully processed
+2024-04-17 11:26:55,815 :: INFO :: --- Starting Record 14
+2024-04-17 11:26:55,816 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,817 :: DEBUG :: Kentika number : 426
+2024-04-17 11:26:55,818 :: DEBUG :: ArchiRès doctype : TE
+2024-04-17 11:26:55,821 :: INFO :: Record fully processed
+2024-04-17 11:26:55,823 :: INFO :: --- Starting Record 15
+2024-04-17 11:26:55,825 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,826 :: DEBUG :: Kentika number : 72545
+2024-04-17 11:26:55,827 :: DEBUG :: ArchiRès doctype : TE
+2024-04-17 11:26:55,830 :: INFO :: Record fully processed
+2024-04-17 11:26:55,833 :: INFO :: --- Starting Record 16
+2024-04-17 11:26:55,834 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,835 :: DEBUG :: Kentika number : 271
+2024-04-17 11:26:55,836 :: DEBUG :: ArchiRès doctype : TE
+2024-04-17 11:26:55,838 :: INFO :: Record fully processed
+2024-04-17 11:26:55,841 :: INFO :: --- Starting Record 17
+2024-04-17 11:26:55,842 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,844 :: DEBUG :: Kentika number : 76792
+2024-04-17 11:26:55,845 :: DEBUG :: ArchiRès doctype : TE
+2024-04-17 11:26:55,848 :: INFO :: Record fully processed
+2024-04-17 11:26:55,851 :: INFO :: --- Starting Record 18
+2024-04-17 11:26:55,852 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,853 :: DEBUG :: Kentika number : 816
+2024-04-17 11:26:55,854 :: DEBUG :: ArchiRès doctype : TE
+2024-04-17 11:26:55,857 :: INFO :: Record fully processed
+2024-04-17 11:26:55,860 :: INFO :: --- Starting Record 19
+2024-04-17 11:26:55,860 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,861 :: DEBUG :: Kentika number : 26547
+2024-04-17 11:26:55,862 :: DEBUG :: ArchiRès doctype : TE
+2024-04-17 11:26:55,864 :: INFO :: Record fully processed
+2024-04-17 11:26:55,867 :: INFO :: --- Starting Record 20
+2024-04-17 11:26:55,868 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,869 :: DEBUG :: Kentika number : 20640
+2024-04-17 11:26:55,870 :: DEBUG :: ArchiRès doctype : TE
+2024-04-17 11:26:55,872 :: INFO :: Record fully processed
+2024-04-17 11:26:55,875 :: INFO :: --- Starting Record 21
+2024-04-17 11:26:55,877 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,878 :: DEBUG :: Kentika number : FICTIF000
+2024-04-17 11:26:55,879 :: DEBUG :: ArchiRès doctype : TE
+2024-04-17 11:26:55,881 :: INFO :: Record fully processed
+2024-04-17 11:26:55,883 :: INFO :: --- Starting Record 22
+2024-04-17 11:26:55,883 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,884 :: DEBUG :: Kentika number : FICTIF001
+2024-04-17 11:26:55,885 :: DEBUG :: ArchiRès doctype : TE
+2024-04-17 11:26:55,887 :: INFO :: Record fully processed
+2024-04-17 11:26:55,889 :: INFO :: --- Starting Record 23
+2024-04-17 11:26:55,890 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,891 :: DEBUG :: Kentika number : 72793
+2024-04-17 11:26:55,892 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,895 :: DEBUG :: Multiple 7X0, keeping first 700 as 7X0 and moving the other as 7X1
+2024-04-17 11:26:55,896 :: INFO :: Record fully processed
+2024-04-17 11:26:55,898 :: INFO :: --- Starting Record 24
+2024-04-17 11:26:55,899 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,900 :: DEBUG :: Kentika number : 42
+2024-04-17 11:26:55,901 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,902 :: INFO :: Record fully processed
+2024-04-17 11:26:55,905 :: INFO :: --- Starting Record 25
+2024-04-17 11:26:55,905 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,906 :: DEBUG :: Kentika number : 9204
+2024-04-17 11:26:55,907 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,911 :: INFO :: Record fully processed
+2024-04-17 11:26:55,914 :: INFO :: --- Starting Record 26
+2024-04-17 11:26:55,915 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,916 :: DEBUG :: Kentika number : FICTIF100
+2024-04-17 11:26:55,917 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,919 :: INFO :: Record fully processed
+2024-04-17 11:26:55,922 :: INFO :: --- Starting Record 27
+2024-04-17 11:26:55,922 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,923 :: DEBUG :: Kentika number : FICTIF101
+2024-04-17 11:26:55,924 :: ERROR :: [Index 27, ID : FICTIF101] DUPLICATE_SUBFIELD_099
+2024-04-17 11:26:55,926 :: INFO :: 099 duplicate subfield : t
+2024-04-17 11:26:55,928 :: INFO :: --- Starting Record 28
+2024-04-17 11:26:55,929 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,930 :: ERROR :: [Index 28, ID : ] NO_RECORD_ID
+2024-04-17 11:26:55,931 :: INFO :: --- Starting Record 29
+2024-04-17 11:26:55,932 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,933 :: DEBUG :: Kentika number : FICTIF103
+2024-04-17 11:26:55,934 :: ERROR :: [Index 29, ID : FICTIF103] NO_ARCHIRES_DOCTYPE
+2024-04-17 11:26:55,935 :: INFO :: --- Starting Record 30
+2024-04-17 11:26:55,936 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,936 :: DEBUG :: Kentika number : FICTIF104
+2024-04-17 11:26:55,937 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,938 :: ERROR :: [Index 30, ID : FICTIF104] NO_100
+2024-04-17 11:26:55,939 :: INFO :: --- Starting Record 31
+2024-04-17 11:26:55,939 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,940 :: DEBUG :: Kentika number : FICTIF105
+2024-04-17 11:26:55,942 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,943 :: ERROR :: [Index 31, ID : FICTIF105] NO_100_A
+2024-04-17 11:26:55,945 :: INFO :: --- Starting Record 32
+2024-04-17 11:26:55,945 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,946 :: DEBUG :: Kentika number : FICTIF106
+2024-04-17 11:26:55,947 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,949 :: INFO :: Record fully processed
+2024-04-17 11:26:55,951 :: INFO :: --- Starting Record 33
+2024-04-17 11:26:55,951 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,952 :: DEBUG :: Kentika number : FICTIF107
+2024-04-17 11:26:55,953 :: DEBUG :: ArchiRès doctype : TE
+2024-04-17 11:26:55,953 :: ERROR :: [Index 33, ID : FICTIF107] NO_971
+2024-04-17 11:26:55,955 :: INFO :: --- Starting Record 34
+2024-04-17 11:26:55,955 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,956 :: DEBUG :: Kentika number : FICTIF108
+2024-04-17 11:26:55,957 :: DEBUG :: ArchiRès doctype : TE
+2024-04-17 11:26:55,958 :: ERROR :: [Index 34, ID : FICTIF108] NO_ORIGIN_DB_DOCTYPE
+2024-04-17 11:26:55,960 :: INFO :: --- Starting Record 35
+2024-04-17 11:26:55,961 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,962 :: DEBUG :: Kentika number : FICTIF109
+2024-04-17 11:26:55,963 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,964 :: ERROR :: [Index 35, ID : FICTIF109] NO_101
+2024-04-17 11:26:55,965 :: INFO :: --- Starting Record 36
+2024-04-17 11:26:55,966 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,967 :: DEBUG :: Kentika number : FICTIF110
+2024-04-17 11:26:55,967 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,968 :: ERROR :: [Index 36, ID : FICTIF110] NO_101_A
+2024-04-17 11:26:55,970 :: INFO :: --- Starting Record 37
+2024-04-17 11:26:55,970 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,971 :: DEBUG :: Kentika number : FICTIF111
+2024-04-17 11:26:55,972 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,975 :: DEBUG :: Multiple 7X0, keeping first 700 as 7X0 and moving the other as 7X1
+2024-04-17 11:26:55,976 :: INFO :: Record fully processed
+2024-04-17 11:26:55,978 :: INFO :: --- Starting Record 38
+2024-04-17 11:26:55,979 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,980 :: DEBUG :: Kentika number : FICTIF112
+2024-04-17 11:26:55,980 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,982 :: INFO :: Record fully processed
+2024-04-17 11:26:55,984 :: INFO :: --- Starting Record 39
+2024-04-17 11:26:55,985 :: DEBUG :: Record is valid
+2024-04-17 11:26:55,986 :: DEBUG :: Kentika number : FICTIF1XX
+2024-04-17 11:26:55,986 :: DEBUG :: ArchiRès doctype : LIV
+2024-04-17 11:26:55,989 :: INFO :: Record fully processed
+2024-04-17 11:26:55,991 :: INFO :: <(^-^)> <(^-^)> Script fully executed without errors <(^-^)> <(^-^)>

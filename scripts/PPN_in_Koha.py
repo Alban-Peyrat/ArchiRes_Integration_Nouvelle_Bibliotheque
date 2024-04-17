@@ -13,7 +13,7 @@ import utils.fcr_func as fcf
 
 dotenv.load_dotenv()
 
-KOHA_URL = os.getenv("KOHA_SRU")
+KOHA_URL = os.getenv("PPN_IN_KOHA_KOHA_SRU")
 sru = ksru.Koha_SRU(KOHA_URL, ksru.SRU_Version.V1_1)
 FILE_PATH = os.getenv("PPN_IN_KOHA_FILE_IN")
 OUTPUT_PATH = os.getenv("PPN_IN_KOHA_OUTPUT_FILE")
