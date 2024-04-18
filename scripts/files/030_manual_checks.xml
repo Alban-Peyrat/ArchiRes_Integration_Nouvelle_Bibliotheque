@@ -1,0 +1,36 @@
+<checks>
+    <check bibnb="46">
+        <subfield code="t" normalised="1">TOPOS</subfield>
+    </check>
+    <check bibnb="43">
+        <subfield code="t" normalised="1">CARNETS DU PAYSAGE (LES)</subfield>
+    </check>
+    <check bibnb="376528">
+        <subfield code="t" normalised="1">ARCHITETTURA DEL PAESAGGIO</subfield>
+    </check>
+    <check bibnb="146">
+        <subfield code="t" normalised="1">CAHIERS DE L'ECOLE DE BLOIS (LES)</subfield>
+    </check>
+    <check bibnb="141004">
+        <subfield code="t" normalised="1">ESPACES VERTS</subfield>
+    </check>
+    <check bibnb="67">
+        <subfield code="t" normalised="1">LOTUS INTERNATIONAL</subfield>
+    </check>
+    <check bibnb="477667">
+        <subfield code="t" normalised="1">GARDEN LAB</subfield>
+    </check>
+    <check bibnb="64">
+        <subfield code="t" normalised="1">PAGES-PAYSAGES</subfield>
+    </check>
+    <check bibnb="151523">
+        <subfield code="t" normalised="1">JARDINS</subfield>
+    </check>
+    <check bibnb="161">
+        <subfield code="t" normalised="1">'SCAPE</subfield>
+    </check>
+    <check bibnb="185201">
+        <subfield code="t" normalised="1">JARDINS DE FRANCE</subfield>
+    </check>
+
+</checks>

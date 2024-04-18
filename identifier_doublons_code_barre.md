@@ -2,7 +2,7 @@
 
 _Nécessite OpenRefine (et potentiellement MarcEdit)_
 
-__Cette vérification se abse sur le principe que tous les code-barres sont préfixés__ : si ce n'est pas le cas, retirer la limite dans l'export des code-barres de la base de données de destination (en évitant de faire planter la base de données).
+__Cette vérification se base sur le principe que tous les code-barres sont préfixés__ : si ce n'est pas le cas, retirer la limite dans l'export des code-barres de la base de données de destination (en évitant de faire planter la base de données).
 
 ## Exporter les données
 
