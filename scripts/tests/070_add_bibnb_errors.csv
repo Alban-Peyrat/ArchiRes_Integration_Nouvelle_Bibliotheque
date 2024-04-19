@@ -1,0 +1,4 @@
+index;id;error;error_message;data
+1;;NO_RECORD_ID;No 001 or 035;
+2;;NO_RECORD_ID;No 001 or 035$a;
+5;(OCoLC)0000000101;TOO_MUCH_BARCODES;Multiple barcodes were found for this item;=995  \\$bPAYV$cPAYV$kA 0053 (1)$fENSP_123123123$fENSP_456456456$00$eLA$o0$30$rLIV

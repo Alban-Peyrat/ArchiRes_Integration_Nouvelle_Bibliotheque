@@ -88,6 +88,8 @@ for record_index, record in enumerate(MARC_READER):
     matched_id = get_mapped_id(record_id)
 
     # Generates the 001
+    if record["001"]:
+        record.remove_field(record["001"])
     if matched_id:
         field_001 = pymarc.field.Field(tag="001", data=matched_id)
         record.add_ordered_field(field_001)
@@ -100,7 +102,7 @@ for record_index, record in enumerate(MARC_READER):
             ERR_MAN.trigger_error(record_index, record_id, Errors.TOO_MUCH_BARCODES, "Multiple barcodes were found for this item", field)
             continue
 
-        barcode = f"{BARCODE_PREFIX}A{BARCODE_CITY}{str(record_id).replace(PREPEND_ORIGIN_DB_ID, '')}I{str(item_index)}"
+        barcode = BARCODE_PREFIX + "A" + BARCODE_CITY + re.sub(r"\D", "", str(record_id)) + "I" + str(item_index)
         
         # If no barcode is found, adds it
         if not (field["f"]):
