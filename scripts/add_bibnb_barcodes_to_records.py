@@ -112,7 +112,9 @@ for record_index, record in enumerate(MARC_READER):
         elif field["f"] == BARCODE_PREFIX:
             field["f"] = barcode
             barcode_fixed += 1
-        # Else, keep the barcode
+        # Else, keep the barcode, but strip it
+        else:
+            field["f"] = field["f"].strip()
 
     # Writes the record
     MARC_WRITER.write(record.as_marc())
