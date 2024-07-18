@@ -65,7 +65,7 @@ Nécessite de configurer les variables d'environnement :
 Le fichier de sortie est composé de 2 colonnes :
 
 * L'identifiant de la notice dans la base de données d'origine
-* L'identifiant de la notice dans la base de données de destination
+* L'identifiant de la notice dans la base de données de destination (__/!\\ vérifier qu'il n'y a pas de `nan` dans cette colonne__)
 
 Au cours de l'exécution, le script va écrire dans la console les feuilles des fichiers qu'il n'a pas réussi à interpréter, en listant les colonnes qu'il n'a pas trouvé au sein de la feuille _(exemple dans [le fichier `010_terminal_text.txt`](./files/060_terminal_text.txt))_.
 __Il est recommandé de vérifier ces informations.__
