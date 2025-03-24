@@ -77,19 +77,19 @@ for record_index, record in enumerate(MARC_READER):
         continue # Fatal error, skipp
 
     # Gets the record ID
-    if not record["035"]:
+    if not record.get("035"):
         ERR_MAN.trigger_error(record_index, "", Errors.NO_RECORD_ID, "No 001 or 035", "")
-    elif not record["035"]["a"]:
+    elif not record.get("035").get("a"):
         ERR_MAN.trigger_error(record_index, "", Errors.NO_RECORD_ID, "No 001 or 035$a", "")
     else:
-        record_id = record["035"]["a"]
+        record_id = record.get("035").get("a")
     
     # Checks if this record is in the record mapping
     matched_id = get_mapped_id(record_id)
 
     # Generates the 001
-    if record["001"]:
-        record.remove_field(record["001"])
+    if record.get("001"):
+        record.remove_field(record.get("001"))
     if matched_id:
         field_001 = pymarc.field.Field(tag="001", data=matched_id)
         record.add_ordered_field(field_001)
@@ -105,16 +105,19 @@ for record_index, record in enumerate(MARC_READER):
         barcode = BARCODE_PREFIX + "A" + BARCODE_CITY + re.sub(r"\D", "", str(record_id)) + "I" + str(item_index)
         
         # If no barcode is found, adds it
-        if not (field["f"]):
+        if not (field.get("f")):
             field.add_subfield("f", barcode)
             barcode_added += 1
         # If the barcode is strictly equal to the prefix, rewrite the barcode
-        elif field["f"] == BARCODE_PREFIX:
-            field["f"] = barcode
+        elif field.get("f") == BARCODE_PREFIX:
+            field.delete_subfield("f")
+            field.add_subfield("f", barcode)
             barcode_fixed += 1
         # Else, keep the barcode, but strip it
         else:
-            field["f"] = field["f"].strip()
+            temp_barcode = field.get("f").strip()
+            field.delete_subfield("f")
+            field.add_subfield("f", temp_barcode)
 
     # Writes the record
     MARC_WRITER.write(record.as_marc())
