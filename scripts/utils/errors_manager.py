@@ -19,6 +19,7 @@ class Errors(Enum):
     ALREADY_MAPPED = 100
     MATCHED_ID_NOT_A_INT = 101
     TOO_MUCH_BARCODES = 102
+    DELETED_RECORD_WITH_BIBNB = 103
 
     # Fix records (10000 → 19999)
     TOO_MUCH_099 = 10000

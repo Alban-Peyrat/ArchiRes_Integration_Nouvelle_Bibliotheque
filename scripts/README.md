@@ -78,6 +78,7 @@ Nécessite de configurer les variables d'environnement :
 
 * `ADD_BIBNB_RECORDS_FILE` : le chemin d'accès complet au fichier contenant les notices à modifier
 * `ADD_BIBNB_ID_MAPPING_FILE` : le chemin d'accès complet au fichier contenant la liste des identifiants mappés (obtenus via [`extract_matching_ids_from_analyzed_FCR_files`](#extract_matching_ids_from_analyzed_fcr_files) par exemple)
+* `ADD_BIBNB_DELETE_RECORDS_FILE` : le chemin d'accès complet au fichier contenant la liste des notices à supprimer (doit être un CSV séparé par `;` et doit contenir au moins la colonne `origin_db_id`)
 * `ADD_BIBNB_FILE_OUT` : le chemin d'accès complet au fichier de sortie (format UNIMARC)
 * `ADD_BIBNB_ERRORS_FILE` : le chemin d'accès complet au fichier contenant les erreurs recontrées (`.csv`)
 * `ADD_BIBNB_PREPEND_ORIGIN_DB_ID` : si nécessaire, une chaîne de caractère à rajouter __devant__ les identifiants de la base de données d'origine contenus dans la liste des identifiants mappés

@@ -17,3 +17,7 @@ _Using `Kentika_` as prefix for origin database ID, nothing for target database 
 * Record `035$a ENSP75625` :
   * `035$a ENSP75625` : `001` added with `493179`
   * 3 `995`, the first has no `$f` the second one is OK, the 3rd has only the prefix : first `995` has `$fENSP_AV00001I0`, second did not change, third has `$fENSP_AV00001I2`
+* Record `035$a ENSP80000` :
+  * `035$a ENSP80000` : record is deleted
+* Record `035$a ENSP80001` :
+  * `035$a ENSP80001` : record is deleted with a warning saying it was matched with biblbionomber `650000`

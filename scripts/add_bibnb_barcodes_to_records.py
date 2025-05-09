@@ -7,6 +7,7 @@ import re
 import pymarc
 from enum import Enum
 import csv
+from typing import List
 
 # Internal import
 from utils.errors_manager import Errors_Manager, Errors
@@ -16,6 +17,7 @@ load_dotenv()
 
 RECORDS_FILE_PATH = os.getenv("ADD_BIBNB_RECORDS_FILE")
 ID_MAPPING_FILE_PATH = os.getenv("ADD_BIBNB_ID_MAPPING_FILE")
+DELETE_RECORDS_FILE_PATH = os.getenv("ADD_BIBNB_DELETE_RECORDS_FILE")
 FILE_OUT = os.getenv("ADD_BIBNB_FILE_OUT")
 ERRORS_FILE_PATH = os.path.abspath(os.getenv("ADD_BIBNB_ERRORS_FILE"))
 ERR_MAN = Errors_Manager(ERRORS_FILE_PATH) # DON'T FORGET ME
@@ -24,6 +26,7 @@ PREPEND_TARGET_DB_ID = os.getenv("ADD_BIBNB_PREPEND_TARGET_DB_ID")
 BARCODE_PREFIX = os.getenv("ADD_BIBNB_BARCORDE_PREFIX")
 BARCODE_CITY = os.getenv("ADD_BIBNB_BARCORDE_CITY")
 MAPPED_IDS = {}
+DELETE_RECORDS_IDS:List[str] = []
 
 # ---------- Class definition ----------
 
@@ -31,6 +34,9 @@ MAPPED_IDS = {}
 class Mapping_File_Headers(Enum):
     ORIGIN_ID = "origin_db_id"
     TARGET_ID = "target_db_id"
+
+class Delete_Records_File_Headers(Enum):
+    ORIGIN_ID = "origin_db_id"
 
 # ---------- Func def ----------
 def add_mapped_id(origin_id:str, target_id:str, check_valid_target_id:bool=True) -> None:
@@ -49,11 +55,20 @@ def add_mapped_id(origin_id:str, target_id:str, check_valid_target_id:bool=True)
 
     MAPPED_IDS[origin_id] = target_id
 
+def add_delete_record_id(origin_id:str) -> None:
+    """Adds a ID to the lsit of records to delete"""
+    if origin_id not in DELETE_RECORDS_IDS:
+        DELETE_RECORDS_IDS.append(origin_id)
+
 def get_mapped_id(origin_id:str) -> str|None:
     """Returns the mapped ID based of the origin ID"""
     if origin_id in MAPPED_IDS:
         return MAPPED_IDS[origin_id]
     return None
+
+def should_be_deleted(origin_id:str) -> bool:
+    """Returns if a record should be deleted"""
+    return origin_id in DELETE_RECORDS_IDS
 
 # ---------- Preparing Main ----------
 MARC_READER = pymarc.MARCReader(open(RECORDS_FILE_PATH, 'rb'), to_unicode=True, force_utf8=True) # DON'T FORGET ME
@@ -64,9 +79,17 @@ with open(ID_MAPPING_FILE_PATH, "r") as f:
     next(reader) # Skip header line
     for row in reader:
         add_mapped_id(f"{PREPEND_ORIGIN_DB_ID}{row[Mapping_File_Headers.ORIGIN_ID.value]}", f"{PREPEND_TARGET_DB_ID}{row[Mapping_File_Headers.TARGET_ID.value]}")
+# ----- Load IDs to delete -----
+with open(DELETE_RECORDS_FILE_PATH, "r") as f:
+    reader = csv.DictReader(f, fieldnames=[elem.value for elem in Delete_Records_File_Headers], delimiter=";")
+    next(reader) # Skip header line
+    for row in reader:
+        add_delete_record_id(f"{PREPEND_ORIGIN_DB_ID}{row[Delete_Records_File_Headers.ORIGIN_ID.value]}")
 
 # ---------- Main ----------
 bibnb_added = 0
+deleted_records = 0
+deleted_records_with_bibnb = 0
 barcode_fixed = 0
 barcode_added = 0
 # Loop through records
@@ -94,6 +117,17 @@ for record_index, record in enumerate(MARC_READER):
         field_001 = pymarc.field.Field(tag="001", data=matched_id)
         record.add_ordered_field(field_001)
         bibnb_added += 1
+    
+    # Check if the record should be deleted
+    # We do that after the bibnb attribution to check any inconsistencies
+    if should_be_deleted(record_id):
+        if record.get("001"):
+            ERR_MAN.trigger_error(record_index, record_id, Errors.DELETED_RECORD_WITH_BIBNB, "Deleted record with a biblionumber", record.get("001").value())
+            deleted_records_with_bibnb += 1
+            bibnb_added -= 1
+        # Don't add the record to output file
+        deleted_records += 1
+        continue
    
     # Generates the barcodes if needed
     for item_index, field in enumerate(record.get_fields("995")):
@@ -128,5 +162,7 @@ ERR_MAN.close()
 
 # print some nb
 print(f"Bibnb added : {bibnb_added}")
+print(f"Deleted records : {deleted_records}")
+print(f"\t(with a bibnb : {deleted_records_with_bibnb})")
 print(f"Barcode fixed : {barcode_fixed}")
 print(f"Barcode added : {barcode_added}")
