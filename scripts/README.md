@@ -85,3 +85,6 @@ Nécessite de configurer les variables d'environnement :
 * `ADD_BIBNB_PREPEND_TARGET_DB_ID` : si nécessaire, une chaîne de caractère à rajouter __devant__ les identifiants de la base de données de destination contenus dans la liste des identifiants mappés
 * `ADD_BIBNB_BARCORDE_PREFIX` : le préfixe des code-barres pour cette école
 * `ADD_BIBNB_BARCORDE_CITY` : si nécessaire, une lettre (ou chaîne de caractère) ajoutant une précision sur le contexte de la génération du code-barre (par exemple, la ville de la bibliothèque si l'établissement à des bibliothèques dans plusieurs villes)
+* `ADD_BIBNB_FICTIVE_ITEM_LIBRARY` : code de bibliothèque à attribuer à un exemplaire fictif
+* `ADD_BIBNB_FICTIVE_ITEM_STATUS` : code de statut à attribuer à un exemplaire fictif
+* `ADD_BIBNB_FICTIVE_ITEM_ITEMTYPE` : code de statut à attribuer à un exemplaire fictif

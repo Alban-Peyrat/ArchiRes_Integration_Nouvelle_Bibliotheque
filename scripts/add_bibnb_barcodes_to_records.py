@@ -4,7 +4,7 @@
 import os
 from dotenv import load_dotenv
 import re
-import pymarc
+from pymarc import MARCReader, Field, Subfield
 from enum import Enum
 import csv
 from typing import List
@@ -25,6 +25,9 @@ PREPEND_ORIGIN_DB_ID = os.getenv("ADD_BIBNB_PREPEND_ORIGIN_DB_ID")
 PREPEND_TARGET_DB_ID = os.getenv("ADD_BIBNB_PREPEND_TARGET_DB_ID")
 BARCODE_PREFIX = os.getenv("ADD_BIBNB_BARCORDE_PREFIX")
 BARCODE_CITY = os.getenv("ADD_BIBNB_BARCORDE_CITY")
+FICTIVE_ITEM_LIBRARY = os.getenv("ADD_BIBNB_FICTIVE_ITEM_LIBRARY")
+FICTIVE_ITEM_STATUS = os.getenv("ADD_BIBNB_FICTIVE_ITEM_STATUS")
+FICTIVE_ITEM_ITEMTYPE = os.getenv("ADD_BIBNB_FICTIVE_ITEM_ITEMTYPE")
 MAPPED_IDS = {}
 DELETE_RECORDS_IDS:List[str] = []
 
@@ -71,7 +74,7 @@ def should_be_deleted(origin_id:str) -> bool:
     return origin_id in DELETE_RECORDS_IDS
 
 # ---------- Preparing Main ----------
-MARC_READER = pymarc.MARCReader(open(RECORDS_FILE_PATH, 'rb'), to_unicode=True, force_utf8=True) # DON'T FORGET ME
+MARC_READER = MARCReader(open(RECORDS_FILE_PATH, 'rb'), to_unicode=True, force_utf8=True) # DON'T FORGET ME
 MARC_WRITER = open(FILE_OUT, "wb") # DON'T FORGET ME
 # ----- Load mapped IDs -----
 with open(ID_MAPPING_FILE_PATH, "r") as f:
@@ -90,6 +93,7 @@ with open(DELETE_RECORDS_FILE_PATH, "r") as f:
 bibnb_added = 0
 deleted_records = 0
 deleted_records_with_bibnb = 0
+fictive_items_added = 0
 barcode_fixed = 0
 barcode_added = 0
 # Loop through records
@@ -114,7 +118,7 @@ for record_index, record in enumerate(MARC_READER):
     if record.get("001"):
         record.remove_field(record.get("001"))
     if matched_id:
-        field_001 = pymarc.field.Field(tag="001", data=matched_id)
+        field_001 = Field(tag="001", data=matched_id)
         record.add_ordered_field(field_001)
         bibnb_added += 1
     
@@ -129,6 +133,18 @@ for record_index, record in enumerate(MARC_READER):
         deleted_records += 1
         continue
    
+    # If no item are present on the record, adds a fictive one
+    if len(record.get_fields("995")) < 1:
+        record.add_ordered_field(
+            Field(tag="995", subfields=[
+                    Subfield("b", FICTIVE_ITEM_LIBRARY),
+                    Subfield("c", FICTIVE_ITEM_LIBRARY),
+                    Subfield("o", FICTIVE_ITEM_STATUS),
+                    Subfield("r", FICTIVE_ITEM_ITEMTYPE)
+                ])
+        )
+        fictive_items_added += 1
+
     # Generates the barcodes if needed
     for item_index, field in enumerate(record.get_fields("995")):
         # Checks if there are too many barcodes
@@ -164,5 +180,7 @@ ERR_MAN.close()
 print(f"Bibnb added : {bibnb_added}")
 print(f"Deleted records : {deleted_records}")
 print(f"\t(with a bibnb : {deleted_records_with_bibnb})")
+print(f"Fictive items added : {fictive_items_added}")
 print(f"Barcode fixed : {barcode_fixed}")
 print(f"Barcode added : {barcode_added}")
+print(f"\t(excluding fictive items) : {barcode_added - fictive_items_added}")

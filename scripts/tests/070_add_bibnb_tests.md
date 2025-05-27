@@ -1,6 +1,16 @@
 # Tests list
 
-_Using `Kentika_` as prefix for origin database ID, nothing for target database ID, `ENSP_` as barcode prefix & `V` as city barcode_
+## Settings
+
+* Origin database ID prefix : `Kentika_`
+* Target database ID prefix : Ø
+* Barcode prefix : `ENSP_`
+* Barcode city : `V`
+* Fictive items library : `ENSP`
+* Fictive items status : `0`
+* Fictive items itemtype : `LIV`
+
+## Results
 
 * Record `035$a (OCoLC)0000000000` : no error & nothing happening
 * Record n°2 :
@@ -21,3 +31,5 @@ _Using `Kentika_` as prefix for origin database ID, nothing for target database 
   * `035$a ENSP80000` : record is deleted
 * Record `035$a ENSP80001` :
   * `035$a ENSP80001` : record is deleted with a warning saying it was matched with biblbionomber `650000`
+* Record `035$a ENSP80002` :
+  * 1 `995` with `$bENSP$cENSP$o0$rLIV$fENSP_AV80002I0`
