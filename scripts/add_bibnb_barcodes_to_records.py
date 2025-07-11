@@ -93,6 +93,7 @@ with open(DELETE_RECORDS_FILE_PATH, "r") as f:
 bibnb_added = 0
 deleted_records = 0
 deleted_records_with_bibnb = 0
+deleted_items = 0
 fictive_items_added = 0
 barcode_fixed = 0
 barcode_added = 0
@@ -131,6 +132,7 @@ for record_index, record in enumerate(MARC_READER):
             bibnb_added -= 1
         # Don't add the record to output file
         deleted_records += 1
+        deleted_items += len(record.get_fields("995"))
         continue
    
     # If no item are present on the record, adds a fictive one
@@ -180,6 +182,7 @@ ERR_MAN.close()
 print(f"Bibnb added : {bibnb_added}")
 print(f"Deleted records : {deleted_records}")
 print(f"\t(with a bibnb : {deleted_records_with_bibnb})")
+print(f"\t(Deleted items : {deleted_items})")
 print(f"Fictive items added : {fictive_items_added}")
 print(f"Barcode fixed : {barcode_fixed}")
 print(f"Barcode added : {barcode_added}")
